@@ -6,9 +6,9 @@ function calculateDahej() {
   const car = parseInt(document.getElementById('car').value) || 0;
   const age =parseInt(document.getElementById('age').value) || 0;
 
-  if (!name || salary <= 0) {
+  if (!age || salary <= 0) {
     document.getElementById('result').innerHTML =
-      'Please enter your full name and valid monthly salary.';
+      'Please enter your age and valid monthly salary.';
     return;
   }
   if (age<18) {
@@ -22,14 +22,13 @@ function calculateDahej() {
   const vehicleValue = car * 400000;
   const total = yearlyIncome + profession + vehicleValue;
 
-  let profileLevel = 'Standard Profile';
-  if (total > 3000000) profileLevel = 'Premium Profile';
-  if (total > 7000000) profileLevel = 'Elite Profile';
+  let resultAlert = 'Asking for dowry is a criminal offence!';
+
 
   document.getElementById('result').innerHTML = `
     <strong>${name}</strong><br>
     Estimated Profile Value: <strong>₹${total.toLocaleString('en-IN')}</strong><br>
-    Category: <strong>${profileLevel}</strong>
+    Category: <strong>${resultAlert}</strong>
   `;
 }
 
