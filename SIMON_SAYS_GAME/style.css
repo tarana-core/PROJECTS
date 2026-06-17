@@ -1,0 +1,52 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+section{
+    text-align: center;
+}
+.main {
+    height: 400px;
+    width: 400px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.sty {
+    border-radius: 14px;
+    border: 8px solid black;
+    margin: 2rem;
+    text-align: center;
+
+}
+
+.button1 {
+    background-color: rgba(255, 0, 0, 0.7);
+
+}
+
+.button2 {
+    background-color: rgba(0, 255, 0, 0.7);
+   
+}
+
+.button3 {
+    background-color: rgba(0, 0, 255, 0.7);
+   
+}
+
+.button4 {
+    background-color: rgba(140, 140, 140, 0.7);
+}
+
+.flash {
+    background-color: white;
+}
+
+.userflash{
+    background-color: rgb(212, 245, 156);
+}
