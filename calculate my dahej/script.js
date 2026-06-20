@@ -1,42 +1,59 @@
-
 function calculateDahej() {
-  const name = document.getElementById('name').value.trim();
+  const age = parseInt(document.getElementById('age').value) || 0;
   const salary = parseInt(document.getElementById('salary').value) || 0;
   const profession = parseInt(document.getElementById('profession').value) || 0;
   const car = parseInt(document.getElementById('car').value) || 0;
-  const age =parseInt(document.getElementById('age').value) || 0;
+  const house = document.getElementById('house').value || 0;
+  if (car < 0) {
+    alert("Vehicle count cannot be negative");
+    return;
+  }
 
-  if (!age || salary <= 0) {
-    document.getElementById('result').innerHTML =
-      'Please enter your age and valid monthly salary.';
+  if (!age || salary <= 0 || profession <= 0 || house === "0") {
+    document.getElementById("result").innerHTML =
+      "Please fill all required fields.";
     return;
   }
-  if (age<18) {
-    document.getElementById('result').innerHTML =
-      'Please check your age !(age must be 18+).';
-    return;
+
+  let ageValue = 0;
+
+  if (age >= 35) {
+    ageValue = 0;
+  } else if (age >= 30) {
+    ageValue = 20000;
+  } else if (age >= 24) {
+    ageValue = 10000;
   }
-  
+
+  let HouseValue = 0;
+  if (house === 'rent') {
+    HouseValue = 0;
+  } else if (house === 'self') {
+    HouseValue = 300000;
+  } else if (house === 'parent') {
+    HouseValue = 100000;
+  }
+
+
 
   const yearlyIncome = salary * 12;
-  const vehicleValue = car * 400000;
-  const total = yearlyIncome + profession + vehicleValue;
+  const vehicleValue = car * 200000;
 
-  let resultAlert = 'Asking for dowry is a criminal offence!';
+  const total = yearlyIncome + profession + vehicleValue + ageValue + HouseValue;
 
+  const resultAlert = `<span style="color:#e11d48; font-weight: 700;">'Asking for dowry is a criminal offence!'</span>`;
 
   document.getElementById('result').innerHTML = `
-    <strong>${name}</strong><br>
-    Estimated Profile Value: <strong>₹${total.toLocaleString('en-IN')}</strong><br>
-    Category: <strong>${resultAlert}</strong>
-  `;
+<h3>Estimated  Value: 
+<strong>₹${total.toLocaleString('en-IN')}</strong></h3> 
+<br>${resultAlert}
+`;
 }
-
-const contactButton = document.querySelector('#contact button');
+const contactButton = document.querySelector('#sendBtn');
 if (contactButton) {
   contactButton.addEventListener('click', function () {
-    const email = document.querySelector('#contact input[type="email"]').value.trim();
-    const message = document.querySelector('#contact input[type="text"]').value.trim();
+    const email = document.querySelector('.contact input[type="email"]').value.trim();
+    const message = document.querySelector('.contact input[type="text"]').value.trim();
 
     if (!email || !message) {
       alert('Please fill your email and message before sending.');
@@ -44,8 +61,8 @@ if (contactButton) {
     }
 
     alert('Thank you! Your message has been submitted successfully.');
-    document.querySelector('#contact input[type="email"]').value = '';
-    document.querySelector('#contact input[type="text"]').value = '';
+    document.querySelector('.contact input[type="email"]').value = '';
+    document.querySelector('.contact input[type="text"]').value = '';
   });
 }
 
@@ -72,7 +89,7 @@ if (localStorage.getItem('theme') === 'dark') {
 }
 
 toggleBtn.addEventListener('click', () => {
-  body.style.opacity = '0.98';
+  body.style.opacity = '0.95';
   setTimeout(() => {
     body.style.opacity = '1';
   }, 150);

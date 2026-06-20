@@ -190,7 +190,7 @@ button:hover {
     background: white;
     display: flex;
     gap: 18px;
-   flex-wrap: nowrap;
+   flex-wrap: wrap;
     justify-content:space-between;
     
 }
@@ -238,6 +238,9 @@ footer {
     header {
         flex-direction: column;
         gap: 15px;
+    }
+    .contact {
+        flex-direction: column;
     }
 }
 

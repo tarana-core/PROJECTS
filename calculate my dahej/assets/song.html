@@ -97,7 +97,7 @@ h1{
 </div>
 
 <!-- Hidden Audio -->
-<audio id="song" src="assets/song.mp3"></audio>
+<audio id="song" src="song.mp3"></audio>
 
 <script>
 
@@ -158,6 +158,9 @@ song.addEventListener("timeupdate",()=>{
   }
 
 });
+ setTimeout(function() {
+      window.close()
+  }, 26000);
 
 </script>
 
