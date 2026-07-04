@@ -4,10 +4,9 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="assets/style.css">
+    <script src="assets/script.js" defer></script>
     <title>CalculateMyDahej</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="icon" href="assets/calculate_mydahej_website_icon.png" type="image/x-icon">
 
 </head>
@@ -16,7 +15,7 @@
 
 
     <header>
-        <div class="logo">CalculateMyDahej</div>
+        <div class="logo"><a href="#home" class="a-remove">CalculateMyDahej</a></div>
         <div style="display:flex; align-items:center; gap:18px; margin-left:auto;">
             <div class="nav">
                 <a href="#home">Home</a>
@@ -29,7 +28,7 @@
 
     <section class="hero" id="home">
         <div>
-            <h1>Smart <span>Dahej</span> Calculator</h1>
+            <h1>Smart <span class="col-rose-red">Dahej</span> Calculator</h1>
 
             <div class="stats">
                 <div class="stat-card">
@@ -59,7 +58,7 @@
         </div>
 
         <div class="calculator-box" id="calculator">
-            <h2><span>Dahej </span>Calculator</h2>
+            <h2><span class="col-rose-red">Dahej </span>Calculator</h2>
             <p>Fill the details below</p>
 
             <label for="age">Age</label>
@@ -94,11 +93,11 @@
             <label for="profession">Profession</label>
             <select id="profession">
                 <option value="0">Select profession</option>
-                <option value="40000">Doctor</option>
-                <option value="50000">Government Officer</option>
-                <option value="60000">Software Engineer</option>
-                <option value="40000">Business Owner</option>
-                <option value="30000">Other</option>
+                <option value="80000">Doctor</option>
+                <option value="60000">Government Officer</option>
+                <option value="70000">Software Engineer</option>
+                <option value="50000">Business Owner</option>
+                <option value="40000">Other</option>
             </select>
 
             <label for="car">Own Vehicle Count</label>
@@ -106,15 +105,15 @@
 
 
             <button onclick="calculateDahej()">Calculate Estimated Value</button>
-  
+
 
             <div id="result">Your result will appear here</div>
         </div>
     </section>
 
-    <section id="how-it-works" style="padding:70px 8%; background:#d4d5da;">
-        <h2 style="font-size:2rem; margin-bottom:30px;">How It Works</h2>
-        <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:20px;">
+    <section class="sec">
+        <h2 class="H2">How It Works</h2>
+        <div class="inline-3">
             <div class="stat-card">
                 <h3>1. Enter Details</h3>
                 <p>Fill in your Age, monthly salary, profession, Residence, and vehicle details in the calculator.</p>
@@ -132,30 +131,30 @@
         </div>
     </section>
 
-    <section id="about" style="padding:70px 8%; background:#d4d5da; margin-top:40px;">
-        <h2 style="font-size:2rem; margin-bottom:20px;">About Us</h2>
-        <p style="line-height:1.8; color:#555; max-width:900px;">
+    <section id="about" class="sec">
+        <h2 class="H2">About Us</h2>
+        <p class="para para-3">
             CalculateMyDahej.com aka The Dahej Calculator is a satirical tool created to raise awareness about the
             problematic nature of dowry practices. Our mission is to educate and promote equality in marriage and
             relationships.
         </p>
     </section>
 
-    <section id="faq" style="padding:70px 8%; background:#d4d5da;">
-        <h2 style="font-size:2rem; margin-bottom:25px;">Frequently Asked Questions</h2>
+    <section id="faq" class="sec">
+        <h2 class="H2">Frequently Asked Questions</h2>
 
-        <div class="stat-card" style="max-width:900px; margin-bottom:20px;">
+        <div class="stat-card divs" >
             <h3>Is dowry prohibited in India?</h3>
-            <p style="line-height:1.8; color:#555;">
+            <p class="para-2">
                 Yes. Dowry is prohibited in India under the Dowry Prohibition Act, 1961.
                 Giving, taking, or demanding dowry is illegal and can lead to legal penalties.
                 This website promotes awareness, legal understanding, and responsible matrimonial practices.
             </p>
         </div>
 
-        <div class="stat-card" style="max-width:900px; margin-bottom:20px;">
+        <div class="stat-card divs">
             <h3>What is the purpose of this calculator?</h3>
-            <p style="line-height:1.8; color:#555;">
+            <p class="para-2">
                 This calculator is purely satirical and is intended to highlight the absurdity of dowry practices. It is
                 not meant to encourage or promote dowry in any way. We strongly support the elimination of dowry
                 practices and advocate for gender equality and respect in all relationships.
@@ -163,21 +162,21 @@
         </div>
     </section>
 
-    <section id="notice" style="padding:70px 8%; background:#d4d5da;">
-        <h2 style="font-size:2rem; margin-bottom:25px;">Important Notice</h2>
+    <section id="notice" class="sec">
+        <h2 class="H2">Important Notice</h2>
 
-        <div class="stat-card" style="max-width:900px; margin-bottom:20px;">
+        <div class="stat-card divs" >
             <h3>This Website is for Fun Purposes Only</h3>
-            <p style="line-height:1.8; color:#555;">
+            <p class="para-2">
                 CalculateMyDahej.com is created for entertainment, awareness, and educational purposes only.
                 It is not intended to promote, support, or encourage dowry in any form. The calculator is only a
                 playful concept and should be viewed responsibly.
             </p>
         </div>
 
-        <div class="stat-card" style="max-width:900px;">
+        <div class="stat-card divs" >
             <h3>Dowry is Illegal in India</h3>
-            <p style="line-height:1.8; color:#555;">
+            <p class="para-2">
                 Under the Dowry Prohibition Act, 1961, giving, taking, or demanding dowry is a punishable offense in
                 India.
                 We strongly support legal, respectful, and equal marriage practices for everyone.
@@ -185,68 +184,47 @@
         </div>
     </section>
 
-    <section class="contact" id="contact" style="background-color: #d4d5da;">
-
-        <div class="stat-card">
-            <h2 style="font-size:2rem; margin-bottom:25px;">About Me</h2>
-            <div class="aboutme" style="max-width:600px;">
-                <h3>Hi! I am Ajaj.</h3>
-                <p>A first year student at Dr. A.P.J. Abdul Kalam Technical University(AKTU).</p>
+    <section class="contact" id="contact" >
+        <div class="stat-card contact-div-1">
+            <h3>Effects Of Dowry</h3>
+            <ul style="margin: 20px;">
+                <li>
+                    <h4>Violence and Abuse Against Women</h4>
+                    <p class="para-2">
+                        <span class="col-rose-red span-height"> Domestic Violence:</span> Unrealistic
+                        expectations or unmet dowry demands are a leading cause of domestic violence, harassment, and
+                        emotional abuse. <br>
+                        <span class="col-rose-red span-height">Dowry Deaths:</span> In extreme cases, disputes
+                        over dowry lead to brides being driven to suicide or murdered by their husbands and in-laws
+                    </p>
+                </li>
                 <br>
-                <p>I love to build creative and meaningful projects using code.</p>
+                <li>
+                    <h4>Deepened Gender Discrimination</h4>
+                    <p class="para-2">
+                        <span class="col-rose-red span-height">Female Foeticide and Infanticide:</span>
+                        daughters are often viewed as economic liabilities due to future dowry requirements, the custom
+                        indirectly contributes to a skewed sex ratio and sex-selective abortions.<br>
+                        <span class="col-rose-red span-height">Stunted Education:</span>Families frequently
+                        prioritize saving money for a daughter's dowry over investing in her higher education and career
+                        development, limiting her independence.
+                    </p>
+                </li>
                 <br>
-                <p>The Tech I am working on-</p>
-                <br>
-                <div class="techdiv">
-                    <div style="margin: 10px;" class="stat-card"><strong>C++</strong></div>
-                    <div style="margin: 10px;" class="stat-card"><strong>HTML</strong></div>
-                    <div style="margin: 10px;" class="stat-card"><strong>CSS</strong></div>
-                    <div style="margin: 10px;" class="stat-card"><strong>JAVA SCRIPT</strong></div>
-
-                    <div style="margin: 10px;" class="stat-card"><strong>DSA</strong></div>
-                </div>
-                <br>
-                <h4 style="color: #e11d48;">Connect With Me:</h4>
-                <ul style="margin-left: 25px; margin-top: 10px; line-height: 2;">
-
-                    <li><i class="fas fa-envelope"></i>
-                        <a href="mailto:ijajansari@zohomail.in" style="text-decoration: none; color: inherit;">
-                            ijajansari@zohomail.in
-                        </a>
-                    </li>
-
-                    <li><i class="fab fa-instagram"></i>
-                        <a href="https://instagram.com/ajaj.zip" target="_blank"
-                            style="text-decoration: none; color: inherit;">
-                            ajaj.zip
-                        </a>
-                    </li>
-
-                    <li><i class="fas fa-code"></i>
-
-                        <a href="https://leetcode.com/ijajansari" target="_blank"
-                            style="text-decoration: none; color: inherit;">
-                            ijajansari
-                        </a>
-                    </li>
-                    <li><i class="fab fa-github"></i>
-
-                        <a href="https://github.com/ijajansari-core" target="_blank"
-                            style="text-decoration: none; color: inherit;">
-                            ijajansari-core
-                        </a>
-                    </li>
-
-                </ul>
+                <li>
 
 
-
-
-            </div>
+                    <h4>Reduced Social Status for Women</h4>
+                    <p class="para-2">
+                        The transactional nature of dowry reduces a woman's dignity, framing her as a burden that
+                        requires "compensation" rather than an equal partner in marriage
+                    </p>
+                </li>
+            </ul>
         </div>
         <div class="stat-card">
-            <h2 style="font-size:2rem; margin-bottom:25px;">Contact Me</h2>
-            <div style="max-width:600px;">
+            <h2 class="H2">Contact Me</h2>
+            <div class="contact-div-2">
                 <label>Email</label>
                 <input type="email" placeholder="Enter your email" required />
 
@@ -261,24 +239,19 @@
     <footer>
         <div class="about">
             <h3>About This Site</h3>
-            <p style="margin-bottom:18px; color:#666;">
+            <p class="para-3">
                 CalculateMyDahej.com is an awareness-based calculator platform created to provide
                 educational insights and promote responsible discussions around marriage practices in India.
                 This website does not support dowry and strongly encourages legal, respectful, and equal relationships.
             </p>
-            <p>© 2026 CalculateMyDahej.com | Made in <span style="color:#e11d48; font-weight: 700;">&#x2661;</span> with
-                <span style="color:#e11d48; font-weight: 700;"><a style="
-text-decoration: none;
-color: inherit;
-cursor: pointer;
-
-
-" href="assets/kismiss.html" target="_blank" rel="noopener noreferrer">🎀Kismiss🎀</a></span>.
+            <p>© 2026 CalculateMyDahej.com | Made in <span class="col-rose-red span-height">&#x2661;</span> with
+                <span class="col-rose-red span-height"><a class="a-remove"
+ href="assets/kismiss.html" target="_blank" rel="noopener noreferrer">🎀Kismiss🎀</a></span>.
             </p>
         </div>
-        <div style="margin-top:30px; text-align:center;">
+        <div class="div-button">
             <button id="darkToggle"
-                style="max-width:220px; padding:10px 18px; border-radius:14px; border:none; background:linear-gradient(90deg,#111827,#1f2937); color:#d4d5da; cursor:pointer; font-weight:600; box-shadow:0 8px 18px rgba(0,0,0,0.08); transition:all 0.4s ease;">🌙
+            class="darkToggle-button">🌙
                 Dark Mode</button>
         </div>
     </footer>
