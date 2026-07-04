@@ -191,6 +191,14 @@ button:hover {
 h4 {
     margin-bottom: 6px;
 }
+.about {
+    max-width: 900px;
+    margin: 0 auto;
+}
+#H3 {
+    margin-bottom: 12px;
+    color: #111827;
+}
 
 footer {
     margin-top: 50px;
@@ -241,6 +249,7 @@ footer {
 .para-3 {
     margin-bottom: 18px;
     color: #666;
+    
 }
 
 .contact-div-1 {
@@ -359,7 +368,6 @@ footer {
     border: 1px solid #334155;
     color: #e2e8f0;
 }
-
 .dark section {
     background: transparent !important;
 }
@@ -368,7 +376,7 @@ footer {
     background: #e11d48 !important;
 }
 
-.dark .about h3 {
+.dark #H3 {
     margin-bottom: 12px;
     color: #94a3b8;
 }
